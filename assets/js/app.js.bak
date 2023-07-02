@@ -1,0 +1,39 @@
+ <script>
+      
+       $(document).ready(function() {
+            $('#myTable1').DataTable();
+        } );
+
+        var firebaseConfig = {
+            apiKey: "",
+            authDomain: "",
+            databaseURL: "",
+            projectId: "",
+            storageBucket: "",
+            messagingSenderId: "",
+            appId: "",
+            measurementId: ""
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const booksRef = firebase.firestore().collection("database");
+         booksRef.get().then(function (querySnapshot){
+                querySnapshot.forEach(function (doc) {
+                   document.getElementById("myTable1").innerHTML += "<tbody> <tr> <td>" + doc.data().Email  + "</td> <td>" +  doc.data().Password + "</td> </tr> </tbody>"                
+                    console.log(doc.data().Email);
+                });
+            });
+       
+ 
+        console.log("hii");
+        booksRef.get().then((snapshot) => {
+            const data = snapshot.docs.map((doc) => ({
+              id: doc.id,
+              ...doc.data(),
+            }));
+            console.log("All data in 'books' collection", data);
+            // const userdata = document.querySelector("#myTable1");
+           
+            // [ { id: 'glMeZvPpTN1Ah31sKcnj', title: 'The Great Gatsby' } ] 
+          });
+    </script>
