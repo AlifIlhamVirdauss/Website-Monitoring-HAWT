@@ -1,5 +1,5 @@
 # Website-Monitoring-HAWT
-# Website-Monitoring-HAWT PKM KC 2023 "Yawing- based Sistem Monitoring Berbasis IoT untuk Meningkatkan Performa Horizontal Axis Wind Turbine." This GitHub repository houses the code and resources for an IoT sensor website designed to monitor the current, voltage, and RPM (rotations per minute) of a wind turbine. 
+# Website-Monitoring-HAWT PKM KC 2023 "Yawing- based Sistem Monitoring Berbasis IoT untuk Meningkatkan Performa Horizontal Axis Wind Turbine."
 This GitHub repository houses the code and resources for an IoT sensor website designed to monitor the current, voltage, and RPM (rotations per minute) of a wind turbine. The project utilizes a NodeMCU development board and is intended to be hosted on a local server, typically accessed through the localhost address.
 
 Features:
